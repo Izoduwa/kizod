@@ -1,10 +1,17 @@
 body::before {
-    display: block;
-    content: '';
-    height: 50px;
+  display: block;
+  content: "";
+  height: 50px;
 }
-@media(min-width: 768px){
-    .news-input{
-        width: 50%;
-    }
+@media (min-width: 768px) {
+  .news-input {
+    width: 50%;
+  }
+}
+.error {
+  border: 1px solid red;
+  outline: #ffdddd solid 4px;
+}
+.hide {
+  display: none;
 }
