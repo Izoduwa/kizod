@@ -588,15 +588,6 @@
       </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.emailjs.com/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("lBq-pFz8nRf7PtXuz");
-      })();
-    </script>
     <script>
       const name = document.getElementById("name");
       const email = document.getElementById("email");
@@ -617,30 +608,9 @@
             message: message.value,
           };
 
-          alert(JSON.stringify(templateParams));
-          emailjs
-            .sendForm("service_8is1aei", "template_61ayo98", templateParams)
-            .then(
-              function (response) {
-                console.log("SUCCESS!", response.status, response.text);
-                alert(
-                  `Hi ${name.value}, thanks for contacting Kizod Technology. Your message has been sent successfully!`
-                );
-              },
-              function (error) {
-                console.log("FAILED...", response.status, error);
-                alert(
-                  `Hi ${name.value}, thanks for contacting Kizod Technology. There seems to be a technical glitch processing this form, while we work on it, please send us an email on "kizodtechnology@gmail.com". We are eager to hear from you, kind regards.`
-                );
-              }
-            );
-
-          /*
-              YOUR_SERVICE_ID = service_8is1aei
-              YOUR_TEMPLATE_ID = template_61ayo98
-              YOUR_PUBLIC_ID = lBq-pFz8nRf7PtXuz
-          */
-
+          alert(
+            `Hi ${name.value}, thanks for contacting Kizod Technology. There seems to be a technical glitch processing this form, while we work on it, please send us an email on "kizodtechnology@gmail.com". We are eager to hear from you, kind regards.`
+          );
           modalDialog.style.display = "none";
           location.reload();
         } else {
